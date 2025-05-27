@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import VentixeLogotype from '../ventixelogo.svg'
 
 const VentixeLogo = () => {
   return (
     <Link to='/' className='logotype' >
-    <img src='/src/assets/ventixelogo.svg' alt='Ventixe logotype' />
+    <img src={VentixeLogotype} alt='Ventixe logotype' />
     <span>Ventixe</span>
     </Link>
   )
