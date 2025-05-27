@@ -2,6 +2,7 @@ import VentixeLogo from './VentixeLogo'
 import Breadcrumb from './UI/Breadcrumb';
 import { useNavbarStatus } from '/src/assets/contexts/NavbarStatusProvider'
 import NavigationLinkList from './NavigationLinkList';
+import SignedIn from './UI/SignedIn';
 
 const Nav = () => {
 

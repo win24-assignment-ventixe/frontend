@@ -2,8 +2,6 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import CenterLayout from './assets/layouts/CenterLayout'
 import PortalLayout from './assets/layouts/PortalLayout'
-import Login from './assets/pages/Login'
-import SignUp from './assets/pages/SignUp'
 import EventsPage from './assets/pages/UserPages/EventPage'
 import PageProvider from './assets/contexts/PageProvider'
 import NavbarStatusProvider from './assets/contexts/NavbarStatusProvider'
@@ -20,11 +18,9 @@ function App() {
       <NavbarStatusProvider>
         <Routes>
           <Route element={<CenterLayout />}>
-            <Route path='/' element={<Login />} />
-            <Route path='/signup' element={<SignUp />} />
           </Route>
             <Route element={<PortalLayout />}>
-              <Route path='/dashboard' element={<DashboardPage />} /> 
+              <Route path='/' element={<DashboardPage />} /> 
               <Route path='/bookings' element={<BookingsPage />} /> 
               <Route path='/invoices' element={<InvoicesPage />} /> 
               <Route path='/events' element={<EventsPage />} /> 

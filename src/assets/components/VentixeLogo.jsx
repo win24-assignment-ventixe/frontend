@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const VentixeLogo = () => {
   return (
-    <Link to='/dashboard' className='logotype' >
+    <Link to='/' className='logotype' >
     <img src='/src/assets/ventixe_logo.svg' alt='Ventixe logotype' />
     <span>Ventixe</span>
     </Link>
