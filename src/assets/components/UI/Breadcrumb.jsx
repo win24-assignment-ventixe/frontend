@@ -18,7 +18,7 @@ const Breadcrumb = () => {
     <nav className="breadcrumb">
       <ul className="breadcrumb-trail">
         <li className="crumb-link">
-          <Link className="crumb-link" to="/dashboard">
+          <Link className="crumb-link" to="/">
             Dashboard
           </Link>
         </li>
