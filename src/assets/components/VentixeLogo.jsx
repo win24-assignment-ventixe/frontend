@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import VentixeLogotype from '../ventixelogo.svg'
+import VentixeLogotype from './ventixelogo.svg'
 
 const VentixeLogo = () => {
   return (
