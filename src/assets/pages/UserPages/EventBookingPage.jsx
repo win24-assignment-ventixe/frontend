@@ -76,7 +76,7 @@ const EventBookingPage = () => {
           <input className='form-input' id='firstName' name='firstName' type='text' placeholder="Enter first name" value={formData.firstName} onChange={handleChange} required/>
         </div>
         <div className="form-group">
-          <label className='form-label' htmlFor='lastName'>First Name</label>
+          <label className='form-label' htmlFor='lastName'>Last Name</label>
           <input className='form-input' id='lastName' name='lastName' type='text' placeholder="Enter last name" value={formData.lastName} onChange={handleChange} required/>
         </div>
         <div className="form-group">

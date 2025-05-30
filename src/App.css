@@ -707,10 +707,10 @@ aside {
     }
   }
 
-  &.dashboard::before { content: '\e196'; }
-  &.bookings::before { content: '\f14a'; }
-  &.invoices::before { content: '\f543'; }
-  &.events::before { content: '\f145'; }
+  &.dashboard::before { content: '\e196'; margin-right: .75rem; }
+  &.bookings::before { content: '\f14a'; margin-right: .75rem; }
+  &.invoices::before { content: '\f543'; margin-right: .75rem; }
+  &.events::before { content: '\f145'; margin-right: .75rem; }
 }
 
 .sign-out {
