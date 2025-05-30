@@ -700,17 +700,22 @@ aside {
     font-family: var(--font-fa-pro);
     font-size: 1.3rem;
     font-weight: 300;
-    
-    @media (width >= 1440px) {
-      margin-right: .75rem;
-      font-size: 1.3em;
-    }
   }
 
-  &.dashboard::before { content: '\e196'; @media (width >= 1440px) {margin-right: .75rem;}}
-  &.bookings::before { content: '\f14a'; @media (width >= 1440px) {margin-right: .75rem;}}
-  &.invoices::before { content: '\f543'; @media (width >= 1440px) {margin-right: .75rem;}}
-  &.events::before { content: '\f145'; @media (width >= 1440px) {margin-right: .75rem;}}
+  &.dashboard::before { content: '\e196';}
+  &.bookings::before { content: '\f14a';}
+  &.invoices::before { content: '\f543';}
+  &.events::before { content: '\f145';}
+
+  @media (width >= 1440px) {
+  &.dashboard::before,
+  &.bookings::before,
+  &.invoices::before,
+  &.events::before {
+    margin-right: .75rem;
+    font-size: 1.3em;
+  }
+}
 }
 
 .sign-out {
