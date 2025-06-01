@@ -34,7 +34,7 @@ const EventBookingPage = () => {
 
     const handleChange = (e) => {
       const { name, value } = e.target
-      setFormData(prev => ({ ...prev, [name]: value }))
+      setFormData(prev => ({ ...prev, [name]: name === "ticketQuantity" ? Number(value) : value }))
     }
 
     const handleSubmit = async (e) => {
@@ -68,6 +68,7 @@ const EventBookingPage = () => {
           <span className='event-details__location'>{event.location}</span>
         </div>
         <span className='event-details__details'>{event.description}</span>
+        <span className='event-details__price'>${event.price} / ticket</span>
       </div>
 
       <form className='booking-form' onSubmit={handleSubmit} noValidate>
@@ -96,6 +97,12 @@ const EventBookingPage = () => {
         <div className="form-group">
           <label className='form-label' htmlFor='email'>Email</label>
           <input className='form-input' id='email' name='email' type='email' placeholder="Enter email" value={formData.email} onChange={handleChange} required/>
+        </div>
+        <div className="form-group">
+          <label className='form-label' htmlFor='ticketQuantity'>Ticket Quantity</label>
+          <select id='ticketQuantity' name='ticketQuantity' className='form-input' value={formData.ticketQuantity} onChange={handleChange} required>
+            {[1,2,3,4,5,6,7,8].map(option => (<option key={option} value={option}>{option}</option>))}
+          </select>
         </div>
         <button type='submit' className='btn btn-submit'>Book now</button>
       </form>

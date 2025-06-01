@@ -5,7 +5,7 @@ const EventCard = ({item}) => {
   return (
     <Link to={`/events/event-details/${item.id}`}  className='event-card'>
         <header className='event-card__header'>
-            <span className="event-card__category">Outdoor & Adventure</span>
+            <span className="event-card__category">{item.category}</span>
             <span className="event-card__status">Active</span>
             {/* <img src='' alt='' className='event-card__image'></img> */}
         </header>
@@ -15,8 +15,8 @@ const EventCard = ({item}) => {
             <span className='event-card__location'>{item.location}</span>
         </section>
         <footer className='event-card__footer'>
-            <div className="event-card__percent">65%</div>
-            <div className="event-card__price">$40</div>
+            <div className="event-card__percent"></div>
+            <div className="event-card__price">${item.price}</div>
         </footer>
     </Link>
   )

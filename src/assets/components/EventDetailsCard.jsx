@@ -5,7 +5,7 @@ const EventDetailsCard = ({event}) => {
   return (
     <div className='event-details'>
         <header className='event-details__header'>
-          <span className="event-details__category">Outdoor & Adventure</span>
+          <span className="event-details__category">{event.category}</span>
           <span className="event-details__status">Active</span>
           {/* <img src='' alt='' className='event-card__image'></img> */}
         </header>
@@ -18,10 +18,13 @@ const EventDetailsCard = ({event}) => {
               <span className='event-details__location'>{event.location}</span>
               <div className="divider mobile-divider"></div>
             </div>
-            <div className="price-group">
-              <span className='event-details__price-header'>Starts from</span>
-              <Link to={`/events/booking/${event.id}`} className="event-details__price">$40</Link>
-            </div>
+            <Link to={`/events/booking/${event.id}`} className='btn-buy'>
+              <i class="fa-duotone fa-solid fa-credit-card-front credit-card"></i>
+              <div className="price-group">
+                <span className='event-details__price-header'>Price</span>
+                <span className="event-details__price">${event.price}</span>
+              </div>
+            </Link>
           </div>
           <div className="divider"></div>
           <span className='event-details__about-event'>About Event</span>

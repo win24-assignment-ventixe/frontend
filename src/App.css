@@ -345,6 +345,10 @@ footer {
   border: 1px solid var(--primary-90);
   color: var(--grey-10);
   transition: 200ms background-color ease-in-out, 200ms border-color ease-in-out;
+
+  @media (width < 768px) {
+    width: 100%;
+  }
   
   &:hover {
     background-color: var(--primary-100);
@@ -995,7 +999,7 @@ aside {
       width: fit-content;
       height: fit-content;
       align-self: flex-end;
-      
+
       @media (width >= 768px) {
         align-items: end;
       }
@@ -1006,6 +1010,28 @@ aside {
       font-weight: var(--font-weight-regular);
       color: var(--grey-70);
     }
+  }
+}
+
+.btn-buy {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--secondary-50);
+  height: fit-content;
+  gap: 1rem;
+  padding: .5rem 1rem;
+  background-color: var(--cool-grey-10_60);
+
+  &:hover {
+    background-color: var(--cool-grey-10_80);
+  }
+
+  .credit-card {
+    font-size: 1.5em;
+    color: var(--grey-70);
   }
 }
 
